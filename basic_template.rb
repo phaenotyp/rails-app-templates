@@ -4,7 +4,6 @@ generate :nifty_layout
 
 
 gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
-gem 'acts_as_state_machine', :lib => 'acts_as_state_machine',  :source => 'http://gems.github.com'
 rake "gems:install"
 
 
