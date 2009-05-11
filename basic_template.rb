@@ -4,9 +4,11 @@ generate :nifty_layout
 
 # GEMS
 gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
+gem 'rubyist-aasm'
+
 rake "gems:install"
 # several Plugins  
-plugin 'act_as_state_maschine', :git => 'git:github.com/rubyist/aasm.git'
+
 
 
 
@@ -19,9 +21,9 @@ end
 
 if yes?("Role Requirement benutzen?")
 # Rollenverwaltung
-plugin 'role_requirement', 
+  plugin 'role_requirement', 
   :git => 'git://github.com/timcharper/role_requirement.git'
-generate("roles" "Role User") 
+  generate("roles" "Role User") 
 end
 
 if yes?("Git nutzen?")
