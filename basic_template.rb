@@ -3,8 +3,11 @@ run "echo TODO > README"
 generate :nifty_layout
 
 # GEMS
-gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
-gem 'rubyist-aasm', :source => 'http://gems.github.com' 
+gem 'mislav-will_paginate', :version => '~> 2.2.3', 
+  :lib => 'will_paginate',  :source => 'http://gems.github.com'
+gem 'rubyist-aasm'
+gem 'ruby-openid'
+ 
 
 rake "gems:install"
 # several Plugins  
