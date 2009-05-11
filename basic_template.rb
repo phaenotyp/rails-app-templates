@@ -5,9 +5,7 @@ generate :nifty_layout
 # GEMS
 gem 'mislav-will_paginate', :version => '~> 2.2.3', 
   :lib => 'will_paginate',  :source => 'http://gems.github.com'
-gem 'rubyist-aasm'
-gem 'ruby-openid'
- 
+gem 'rubyist-aasm', :lib => "aasm", :source => 'http://gems.github.com'
 
 rake("gems:install", :sudo => true)
 
