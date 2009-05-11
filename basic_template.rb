@@ -4,7 +4,7 @@ generate :nifty_layout
 
 # GEMS
 gem 'mislav-will_paginate', :lib => 'will_paginate', :source => 'http://gems.github.com'
-gem 'rubyist-aasm'
+gem 'rubyist-aasm', :source => 'http://gems.github.com' 
 
 rake "gems:install"
 # several Plugins  
