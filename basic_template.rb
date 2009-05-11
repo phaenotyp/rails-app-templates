@@ -9,7 +9,8 @@ gem 'rubyist-aasm'
 gem 'ruby-openid'
  
 
-rake "gems:install"
+rake("gems:install", :sudo => true)
+
 # several Plugins  
 
 
