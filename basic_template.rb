@@ -21,12 +21,13 @@ if yes?('Restful Authenticate benutzen?')
 
 end
 
-if yes?("Role Requirement benutzen?")
-# Rollenverwaltung
-  plugin 'role_requirement', 
-  :git => 'git://github.com/timcharper/role_requirement.git'
-  generate("roles" "Role User") 
+if yes?("ACL 2 nutzen?")
+  plugin "acl_system2" ,
+  :git => "git://github.com/ezmobius/acl_system2.git"
+  generate(:nifty_scaffold, "role", "name:string")
+  generate("roles_users","role_id:integer","user_id:integer")
 end
+
 
 if yes?("Git nutzen?")
   git :init
@@ -44,3 +45,4 @@ if yes?("Git nutzen?")
 
   git :add => ".", :commit => "-m 'initial commit'"
 end
+rake ("db:migrate")
